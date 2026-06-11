@@ -68,8 +68,8 @@ python3 scripts/ui-ux-pro-max/search.py "mobile form" --domain ux
 python3 scripts/ui-ux-pro-max/search.py "responsive" --stack html-tailwind
 ```
 
-可用 domain: `style`, `color`, `typography`, `ux`, `product`, `landing`, `chart`
-可用 stack: `html-tailwind`, `react`, `nextjs`, `vue`, `svelte`, `shadcn`, `swiftui`, `react-native`, `flutter`
+可用 domain: `style`, `color`, `chart`, `landing`, `product`, `ux`, `typography`, `icons`, `react`, `web`
+可用 stack: `html-tailwind`, `react`, `nextjs`, `astro`, `vue`, `nuxtjs`, `nuxt-ui`, `svelte`, `swiftui`, `react-native`, `flutter`, `shadcn`, `jetpack-compose`
 
 #### Step 3: 生成 HTML 原型
 
