@@ -12,15 +12,17 @@ AI Agent 技能：撰写产品需求文档(PRD) + 生成可交互原型。
 
 ## 安装
 
-```bash
-clawhub install prd-writer
-```
-
-或手动克隆到你的 skills 目录：
+把 skill 克隆到 Claude Code 的 skills 目录：
 
 ```bash
-git clone https://github.com/FinStep-AI/prd-writer-skill.git ~/clawd/skills/prd-writer
+# 全局（所有项目可用）
+git clone https://github.com/wangchangwei/prd-skill.git ~/.claude/skills/prd-writer
+
+# 或项目级（仅当前项目可用）
+git clone https://github.com/wangchangwei/prd-skill.git <你的项目>/.claude/skills/prd-writer
 ```
+
+> 其他客户端（Claude.ai 桌面端 / Cursor / 第三方 skill 管理器如 clawhub）有各自的 skills 目录，按各自文档放即可。
 
 ## 触发条件
 
@@ -108,3 +110,11 @@ python3 scripts/ui-ux-pro-max/search.py "modern elegant" --domain typography
 ## License
 
 MIT
+
+## 致谢
+
+本项目 fork 自 [FinStep-AI/prd-writer-skill](https://github.com/FinStep-AI/prd-writer-skill)，感谢原作者搭建的 PRD 撰写 + 原型生成工作流与 UI-UX-Pro-Max 数据集。
+
+本 fork 主要新增：
+- 📦 `scripts/build_site.py` —— 把每次生成的所有 md + 原型聚合成一个带顶部导航的单文件站点（参见 [一键打包站点](#-一键打包站点) 段）
+- 📝 文档同步：补全 `SKILL.md` 中的 domain / stack 全集，修正安装路径为 Claude Code 标准目录
