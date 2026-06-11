@@ -71,6 +71,8 @@
 
   /* ===== 主体 ===== */
   main { display: grid; grid-template-columns: 248px 1fr; min-height: calc(100vh - 56px); }
+  /* 原型模式：单列布局，避免 display:none 的 aside 仍占 grid track */
+  main:has(.content.is-prototype) { grid-template-columns: 1fr; }
   @media (max-width: 900px) { main { grid-template-columns: 1fr; } aside.toc { display: none; } }
 
   aside.toc {
