@@ -67,6 +67,7 @@ Agent: [自动触发 prd-writer 技能]
        2. 生成 Feature List
        3. 生成 PRD 文档
        3.5 文档自审（两层：内联 spec self-review + reviewer subagent）
+       3.6 任务拆解（优先用 superpowers:writing-plans 输出 bite-sized task-breakdown.md）
        4. 生成设计系统
        5. 生成 HTML 原型
 ```
