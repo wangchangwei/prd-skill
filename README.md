@@ -1,6 +1,16 @@
 # PRD Writer Skill
 
-AI Agent 技能：撰写产品需求文档(PRD) + 生成可交互原型。
+AI Agent 技能：撰写产品需求文档(PRD) + 生成可交互原型 + 一键打包成可分享的单文件站点。
+
+## 📷 实际效果
+
+跑完整工作流后的产物站点（[`scripts/build_site.py`](scripts/build_site.py) 把所有 md + 原型聚合）：
+
+| 文档视图（含 mermaid / 表格 / 代码块）| 原型视图（iframe srcdoc 嵌入）|
+|----|----|
+| ![文档](docs/screenshots/coffee-site-md.png) | ![原型](docs/screenshots/coffee-site-prototype.png) |
+
+顶部导航在 md 文档（设计文档 / PRD / Feature List / 自审报告 / 设计系统）和可交互原型之间切换，左侧 ToC 自动生成。单文件、离线可用、双击浏览器即开。
 
 ## 功能
 
