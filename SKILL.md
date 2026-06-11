@@ -77,12 +77,28 @@ python3 scripts/ui-ux-pro-max/search.py "responsive" --stack html-tailwind
 
 技术规格见 [references/prototype-guide.md](references/prototype-guide.md)
 
+### 阶段4.5：打包站点（推荐）
+
+把当次生成的所有 md 文档 + 原型 html 聚合成一个**带顶部导航的单文件站点**，方便交付与分享：
+
+```bash
+python3 scripts/build_site.py <产物目录> --title "项目名称"
+# 例如：python3 scripts/build_site.py . --title "咖啡馆点单"
+```
+
+产出 `site.html`：
+- 顶部导航菜单：自动列出所有 md 文档（按数字前缀排序）+ "原型" 标签
+- md 内容客户端渲染（marked + highlight + mermaid 全部 CDN，无构建依赖）
+- 原型用 `<iframe srcdoc>` 内嵌，CSS/JS 完全隔离
+- 单文件、自包含、离线可用、可邮件传 / 上 Cloudflare Pages
+
 ### 阶段5：部署（可选）
 
 Cloudflare Pages 部署（国内可访问）：
 
 ```bash
-cd prototype && wrangler pages deploy . --project-name=your-project
+# 把 site.html 上传，或部署整个产物目录
+wrangler pages deploy . --project-name=your-project
 ```
 
 详见 [references/cloudflare-deploy.md](references/cloudflare-deploy.md)
@@ -102,3 +118,4 @@ cd prototype && wrangler pages deploy . --project-name=your-project
 - `PRD.md` - 完整需求文档
 - `design-system/` - 设计系统
 - `prototype.html` - 可交互原型
+- `site.html` - 聚合站点（阶段 4.5 生成）：md + 原型 + 顶部导航，单文件可分享

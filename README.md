@@ -58,6 +58,21 @@ Agent: [自动触发 prd-writer 技能]
        5. 生成 HTML 原型
 ```
 
+## 📦 一键打包站点
+
+PRD + 原型 + 质检报告等所有产物，可打包成**一个带顶部导航的单文件站点**：
+
+```bash
+python3 scripts/build_site.py <产物目录>
+# 例如：python3 scripts/build_site.py ./my-project --title "我的项目"
+```
+
+生成 `site.html`，双击浏览器即可看：
+- 顶部 tab 在 md 文档和可交互原型之间切换
+- md 自动按数字前缀排序、左侧 ToC 自动生成
+- mermaid / 代码高亮 / 表格全部支持
+- 自包含、离线可用，可邮件传 / 上 Cloudflare Pages
+
 ## 设计系统搜索
 
 ```bash
