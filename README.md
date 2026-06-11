@@ -53,12 +53,15 @@ prd-writer/
 用户: 帮我写一个电商小程序的 PRD
 
 Agent: [自动触发 prd-writer 技能]
-       1. 采集需求
+       1. 采集需求（优先用 superpowers:brainstorming 做 Socratic 澄清）
        2. 生成 Feature List
        3. 生成 PRD 文档
+       3.5 文档自审（两层：内联 spec self-review + reviewer subagent）
        4. 生成设计系统
        5. 生成 HTML 原型
 ```
+
+> 阶段 1 的澄清与阶段 3.5 的自审优先调用 [superpowers](https://github.com/obra/superpowers) 的 brainstorming / requesting-code-review；未安装时自动降级到 `references/brainstorming-fallback.md` 与 `references/self-review-checklist.md` 内联模板。
 
 ## 📦 一键打包站点
 
