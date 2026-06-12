@@ -4,13 +4,17 @@ AI Agent 技能：撰写产品需求文档(PRD) + 生成可交互原型 + 一键
 
 ## 📷 实际效果
 
-跑完整工作流后的产物站点（[`scripts/build_site.py`](scripts/build_site.py) 把所有 md + 原型聚合）：
+跑完整工作流后的产物站点（[`scripts/build_site.py`](scripts/build_site.py) 把所有 md + 原型聚合）。下方 4 张是完整工作流 4 个核心 tab 的实拍：
 
-| 文档视图（含 mermaid / 表格 / 代码块）| 原型视图（iframe srcdoc 嵌入）|
+| 1. Design（阶段 1：brainstorming）| 2. 03.5 self review（双层自审报告）|
 |----|----|
-| ![文档](docs/screenshots/coffee-site-md.png) | ![原型](docs/screenshots/coffee-site-prototype.png) |
+| ![Design](docs/screenshots/coffee-v2-design.png) | ![03.5 self review](docs/screenshots/coffee-v2-selfreview.png) |
 
-顶部导航在 md 文档（设计文档 / PRD / Feature List / 自审报告 / 设计系统）和可交互原型之间切换，左侧 ToC 自动生成。单文件、离线可用、双击浏览器即开。
+| 3. Task breakdown（阶段 3.6：12 任务 + 业务验收标准）| 4. 原型（iframe 满宽嵌入）|
+|----|----|
+| ![Task breakdown](docs/screenshots/coffee-v2-taskbreakdown.png) | ![原型](docs/screenshots/coffee-v2-prototype.png) |
+
+顶部导航在 md 文档（设计文档 / PRD / Feature List / 自审报告 / 任务拆解 / 设计系统）和可交互原型之间切换，左侧 ToC 自动生成。单文件、离线可用、双击浏览器即开。
 
 ## 功能
 
